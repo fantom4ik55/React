@@ -4,22 +4,26 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <Message react= 'Message' name= 'Alex Sramko !'/>
+       
     </div>
   );
 }
+
+function Message(props) {
+  return ( 
+    <div class='contener'>
+      <h1 class="contener__text">Привет я <span style={{ color: 'red' }}>{props.name}</span></h1>
+      <p class='contener__dz'>Это DZ1</p>
+      <ul>
+        <li class='contener__list'><span>&#9989;</span>Развернуть новый проект с использованием create-react-app.</li>
+        <li class='contener__list'><span>&#9989;</span>Создать компонент Message, отображающий переданный ему props текст.</li>
+        <li class='contener__list'><span>&#9989;</span>Стилизовать компоненты через css (при желании можно использовать less или sass).</li>
+        <li class='contener__list'><span>&#9989;</span>Дополнительное задание: Установить расширение React Devtools.</li>
+      </ul>
+    </div>
+   );
+}
+
 
 export default App;
